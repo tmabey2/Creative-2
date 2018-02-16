@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+ 
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <meta content="">
+    <style></style>
+  </head>
+  <body>
+  
+  <div id = "whole">
+		<div id="title">
+		<h1>Magic Cards Search</h1>
+		</div>
+	
+		
+		<div id="mtgcarddisplay">
+		</div>
+		
+		
+		
+		<div id="mtgcardaccess">	
+
+			<p>Search:</p>
+			<input id="textbox" v-model="input">
+			<br>
+			<button id="buttons" v-on:click = "fetchCard">Cast</button>
+			
+	
+		</div>	
+		
+		<div id="dragonButton">
+			
+			<button id="buttons" v-on:click = "summonDragon">Do Not Push</button>
+				
+		</div>	
+
+  
+  		<div id="footer">
+			<a href="https://github.com/tmabey2/Creative-2">Link to Github</a>  		
+  		</div>
+  
+  
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>  
+  	<script src ="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script text="type/javascript" src="script.js"></script>
+	
+	</div>
+  </body>
+</html>

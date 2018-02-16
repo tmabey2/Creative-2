@@ -1,0 +1,362 @@
+
+
+#title{
+background-color: maroon;
+margin-bottom: 25px;
+
+height: 15vh;
+
+align-content: center;
+color: #FF4F4C;
+
+}
+
+
+body{
+
+	background-color:black;
+
+
+}
+
+#footer{
+
+	background-color:#7F2826;
+	margin-top: 25px;
+}
+
+#whole{
+	
+	display: grid;
+   grid-template-columns: 1fr
+   grid-template-rows: auto auto auto auto;
+    grid-template-areas: 
+        "header"
+        "mtgcarddisplay"
+        "mtgcardaccess"
+        "footer";
+    grid-gap: 20px;
+
+
+
+}
+
+
+
+
+
+/*Logo style*/
+.logo {
+	
+	height: 100px;
+	float: right;
+	
+
+}
+
+#title {
+
+	float: right;
+	padding-right: 45px;
+	/*padding-bottom: 50px;*/
+	color:#FF4F4C;
+	text-shadow: 2px 2px black;
+	font-size: 20px;
+	text-align: center;
+	padding-top: 10px;
+	margin-top: 0;
+
+
+}
+
+#mtgcarddisplay {
+	align-content: center;
+	padding: 15px;
+	
+
+}
+
+#mtgcardaccess {
+color:white;
+
+
+}
+
+#textbox{
+	
+	margin-bottom: 25px;
+}
+
+
+#buttons{
+	border-color: lightgray;
+	border-width: 3px;
+	
+	padding-top: 7px;
+	padding-bottom: 7px;
+	
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-top: 10px;
+
+}
+
+
+
+
+
+
+/* Button Style///////////////////////////////////////////// */
+
+input.button{
+	
+	background-color: 605947;
+	border: none;
+	color: E0BC62;
+	
+	padding 16px 32px;
+	text-decoration: none;
+	font-size: 35px;
+	margin 4px 2px;
+	cursor: pointer;
+	width: 80%;
+	height: 90px;
+
+}
+
+input.letterbutton{
+	width: 50%;
+	
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+    padding:10px;
+}
+
+.container {
+
+	height: 100vh;
+
+	display: grid;
+	
+	/* Number of columns, size of each*/
+	grid-template-columns: 3fr 1fr;
+	
+	
+	/* Assign areas to specific locations on grid 
+		First row is header
+		Second row is shared between main and sidebar
+		Last Row is footer. */
+		
+	grid-template-areas:
+		"header header"
+		"main sidebar"
+		"inventory map"
+		"footer footer";
+		
+	/* gaps between cells in the grid*/
+	
+	grid-gap: 25px;
+	
+}
+
+div {
+	
+	text-align: center;
+	color: 60512A;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+	
+}
+
+.header {
+	
+	/* Matches grid-template-areas labels in .container for grid*/
+	grid-area: header;
+	background-color: 605947;
+	height: 120px;
+	
+}
+
+.sidebar {
+
+/* Matches grid-template-areas labels in .container for grid*/
+	grid-area: sidebar;
+	background-color: E5D4A9;
+	color: black;
+
+}
+
+.main {
+
+/* Matches grid-template-areas labels in .container for grid*/
+	grid-area: main;
+	background-color: E5D4A9;
+	color: black;
+	font-family: Bookman Old Style;
+	
+
+}
+
+
+.inventory{
+
+	background-color: 60512A;
+	color: E0BC62;
+
+}
+
+.map{
+	
+	background-color: 60512A;
+	color:E0BC62;
+
+
+}
+
+
+.footer {
+	
+	grid-area: footer;
+	background-color: 60512A;
+	color:E0BC62;
+	height: 80px;
+
+}
+
+/* Add flex code for practice here? */
+
+
+
+/*Responsive menu code///////////////////////////////////////////////////////////////////////////*/
+
+/* Remove the ul padding and styling*/
+.header ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	position:absolute;
+
+	
+}
+
+/* Horizontal list with spacing*/
+.header li{
+	
+	display:inline-block;
+	float:left;
+	margin-right: 15px;
+	
+}
+
+/*Style of links for menu*/
+.header li a{
+	
+	display:block;
+	min-width:140px;
+	height:100px;
+	text-align: center;
+	line-height: 100px;
+	color: E0BC62;
+	background: E5D4A9;
+	text-decoration: none;
+	font-size: 25px;
+
+	
+}
+
+/*Active Color*/
+.header li:hover a{
+	
+	background: tan;
+	color: 60512A;
+
+}
+
+/*Hover state for top links*/
+.header li:hover ul a{
+	
+	background: tan;
+	
+}
+
+/* Hover state of dropdown lists*/
+.header li:hover ul a:hover {
+	
+	background: AD924C;
+	color: 605947;
+	
+}
+
+/*Style for dropdown lists*/
+.header li:hover ul a{
+	
+	background: AD924C;
+	color:  605947;
+	height: 40px;
+	line-height: 40px;
+	
+}
+
+/*Hide dropdowns until hover*/
+.header li ul{
+	
+	display:none;
+
+}
+
+/*Display dropdowns when hover*/
+.header ul li a:hover + .hidden, .hidden:hover{
+	
+	display:block;
+
+}
+
+/*Make dropdowns vertical*/
+.header li ul li {
+
+	display: block;
+	float: none;
+
+}
+
+/*Prevent text wrapping*/
+.header li ul li a{
+	
+	width: auto;
+	min-width: 100px;
+	padding: 0 20px;
+	
+}
+
+/*Style for hidden show menu button*/
+.header .show-menu{
+	
+	text-decoration:none;
+	color: #fff;
+	background: #FF5035;
+	text-align:center;
+	padding: 10px 0;
+	
+	display: none;
+
+}
+
+/*Hide checkbox*/
+.header  input[type=checkbox]{
+	display:none;
+}
+
+/*Show menu when checkbox is checked*/
+.header input[type=checkbox]:checked ~ #menu{
+
+	display:block;
+
+}
